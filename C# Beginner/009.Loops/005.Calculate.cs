@@ -14,8 +14,8 @@ namespace _005.Calculate
             decimal factorielN = 1;
             decimal result = 0;
             
-            int n = int.Parse(Console.ReadLine());
-            int x = int.Parse(Console.ReadLine());
+            double n = double.Parse(Console.ReadLine());
+            double x = double.Parse(Console.ReadLine());
 
             for (int i = 1; i <= n; i++)
             {
