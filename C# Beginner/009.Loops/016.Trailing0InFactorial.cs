@@ -34,7 +34,6 @@ namespace _016.Trailing0InFactorial
                 if (array[i] == 0)
                 {
                     count0++;
-                    Console.WriteLine(count0);
                 }
                 else
                 {
