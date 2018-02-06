@@ -1,0 +1,60 @@
+'\t' табулация
+\" за принтиране на двойни кавички
+@ преди стинга принтира стринга точно както е написан
+ctrl + K + D - Как се подрежда кода
+ctrl + K + C - За да се коментират редове
+ctrl + K + U - За да се махне коментара
+
+BigInteger / numerics - големи числа
+
+List<int> list = new List<int>(); - деклариране на нов лист от интове
+
+int[] array1 = new int[] { }; - деклариране на нов масив от интове
+
+int n = Int32.Parse(Console.ReadLine());
+var bin = Convert.ToString(n, 2);
+	Конвертира числото "n" в двоичната бройна система
+
+Math.Pow(x , y) - повдига числото 2.35 на степен 4.323
+	Пример: Math.Pow(2.35, 4.323)
+
+Math.Sqrt(x) - изчислява корен квадратен от число
+	Пример: Math.Sqrt(100) принтира 10.
+
+Math.Round(x , y) - принтира число със запетая по зададено ограничение
+	Пример: Console.WriteLine(Math.Round(55.12345678 , 3));
+	Принтира "55.123"
+
+String.Join(" ",arrays)
+	чете масива и слага спейс между елементите
+	може да се слагат повече от един силмвол за разделител
+	Пример: Console.WriteLine(String.Join(" ",arrays));
+
+.Length - предоставя последния силмвол или дължината на стринга/масива
+	Пример: MyString.Length - принтира число равно на броя букви в MyString
+
+string[] input = Console.ReadLine().Split();
+	Разделя написаното на един ред в различни индекси.
+	Пример: string[] input = Console.ReadLine().Split();
+		//Parse element 0
+           	 int a = int.Parse(input[0]);
+            	//Parse element 1
+            	int b = int.Parse(input[1]);
+
+Array.Sort(myArray); - подрежда масива numArray от най малкото към най голямото
+
+Array.Reverse(myArray); - преобръща масива (последния индекс става първи и т.н.)
+
+MyArray.OrderBy(d => d).ToArray()
+	пренарежда масива по големина на цифрите в него
+	Пример: int[] MySortArray = MyArray.OrderBy(d => d).ToArray();
+
+
+
+
+
+
+
+
+
+
