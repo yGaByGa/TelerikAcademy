@@ -5,6 +5,8 @@ ctrl + K + D - Как се подрежда кода
 ctrl + K + C - За да се коментират редове
 ctrl + K + U - За да се махне коментара
 
+(- '0')	- принтира от инт към чар и обратното
+
 BigInteger / numerics - големи числа
 
 List<int> list = new List<int>(); - деклариране на нов лист от интове
@@ -49,7 +51,10 @@ MyArray.OrderBy(d => d).ToArray()
 	пренарежда масива по големина на цифрите в него
 	Пример: int[] MySortArray = MyArray.OrderBy(d => d).ToArray();
 
-
+bool bb = array1.Zip(array2, (a, b) => (a == b)).Any(p => !p);
+            if (!bb) Console.WriteLine("Equal");
+            else Console.WriteLine("Not equal");
+	Проверява дали единия пасив е равен на другия и принтира зададеното
 
 
 
