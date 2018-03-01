@@ -1,11 +1,12 @@
 '\t' табулация
 \" за принтиране на двойни кавички
 @ преди стинга принтира стринга точно както е написан
+(- '0')	- принтира от инт към чар и обратното
+	Пример: Console.ReadLine(55 - '0');
+
 ctrl + K + D - Как се подрежда кода
 ctrl + K + C - За да се коментират редове
 ctrl + K + U - За да се махне коментара
-
-(- '0')	- принтира от инт към чар и обратното
 
 BigInteger / numerics - големи числа
 
@@ -32,9 +33,6 @@ String.Join(" ",arrays)
 	може да се слагат повече от един силмвол за разделител
 	Пример: Console.WriteLine(String.Join(" ",arrays));
 
-.Length - предоставя последния силмвол или дължината на стринга/масива
-	Пример: MyString.Length - принтира число равно на броя букви в MyString
-
 string[] input = Console.ReadLine().Split();
 	Разделя написаното на един ред в различни индекси.
 	Пример: string[] input = Console.ReadLine().Split();
@@ -54,9 +52,14 @@ MyArray.OrderBy(d => d).ToArray()
 bool bb = array1.Zip(array2, (a, b) => (a == b)).Any(p => !p);
             if (!bb) Console.WriteLine("Equal");
             else Console.WriteLine("Not equal");
-	Проверява дали единия пасив е равен на другия и принтира зададеното
+	Проверява дали единия масив е равен на другия и принтира зададеното
 
-
+charForRemove, System.StringSplitOptions.RemoveEmptyEntries
+	Премахва чарове/стрингове от един масив в друг.
+	Пример: string[] charForRemove = { " ", "," };
+        	string text = Console.ReadLine(); //2, -4, -6, 10, 2, 1, 5
+        	int ways = int.Parse(Console.ReadLine()); //3
+        	string[] roadArray = text.Split(charForRemove, System.StringSplitOptions.RemoveEmptyEntries);
 
 
 
