@@ -1,18 +1,29 @@
 '\t' табулация
 \" за принтиране на двойни кавички
 @ преди стинга принтира стринга точно както е написан
-(- '0')	- принтира от инт към чар и обратното
-	Пример: Console.ReadLine(55 - '0');
-
 ctrl + K + D - Как се подрежда кода
 ctrl + K + C - За да се коментират редове
 ctrl + K + U - За да се махне коментара
 
 BigInteger / numerics - големи числа
-
 List<int> list = new List<int>(); - деклариране на нов лист от интове
-
 int[] array1 = new int[] { }; - деклариране на нов масив от интове
+
+Array.Sort(myArray); - подрежда масива numArray от най малкото към най голямото
+Array.Reverse(myArray); - преобръща масива (последния индекс става първи и т.н.)
+
+(- '0')	- принтира от инт към чар и обратното
+	Пример: Console.ReadLine(55 - '0');
+
+doubleNumber.ToString(".00")
+	Принтира double число в textBox като го форматира до 2-рата цифра
+	Пример: doubleNumber.ToString(".00")
+		принтира - 2.33
+
+Replace(" ", "") - замества първия чар с втория.
+	Пример : string str = string.Intern(Console.ReadLine());
+        	 str = str.Replace(" ", "").Replace(",", "").Replace(".", "").Replace("-", "");
+	Принтира стринга str без " ,.-" 
 
 int n = Int32.Parse(Console.ReadLine());
 var bin = Convert.ToString(n, 2);
@@ -41,10 +52,6 @@ string[] input = Console.ReadLine().Split();
             	//Parse element 1
             	int b = int.Parse(input[1]);
 
-Array.Sort(myArray); - подрежда масива numArray от най малкото към най голямото
-
-Array.Reverse(myArray); - преобръща масива (последния индекс става първи и т.н.)
-
 MyArray.OrderBy(d => d).ToArray()
 	пренарежда масива по големина на цифрите в него
 	Пример: int[] MySortArray = MyArray.OrderBy(d => d).ToArray();
@@ -60,6 +67,12 @@ charForRemove, System.StringSplitOptions.RemoveEmptyEntries
         	string text = Console.ReadLine(); //2, -4, -6, 10, 2, 1, 5
         	int ways = int.Parse(Console.ReadLine()); //3
         	string[] roadArray = text.Split(charForRemove, System.StringSplitOptions.RemoveEmptyEntries);
+
+input.ToCharArray()
+	Разпада стринг на чарове.
+	Пример: string input = Console.ReadLine();
+           	char[] charArray = input.ToCharArray();
+
 
 
 
