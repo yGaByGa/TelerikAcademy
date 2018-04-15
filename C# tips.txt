@@ -20,7 +20,7 @@ doubleNumber.ToString(".00")
 	Пример: doubleNumber.ToString(".00")
 		принтира - 2.33
 
-Replace(" ", "") - замества първия чар с втория.
+Replace(" ", "") - замества първия чар с втория
 	Пример : string str = string.Intern(Console.ReadLine());
         	 str = str.Replace(" ", "").Replace(",", "").Replace(".", "").Replace("-", "");
 	Принтира стринга str без " ,.-" 
