@@ -4,46 +4,46 @@
 ctrl + K + D - Как се подрежда кода
 ctrl + K + C - За да се коментират редове
 ctrl + K + U - За да се махне коментара
-
+-------------------------------------------------------------------------------------------------------------
 BigInteger / numerics - големи числа
 List<int> list = new List<int>(); - деклариране на нов лист от интове
 int[] array1 = new int[] { }; - деклариране на нов масив от интове
-
 Array.Sort(myArray); - подрежда масива numArray от най малкото към най голямото
 Array.Reverse(myArray); - преобръща масива (последния индекс става първи и т.н.)
-
++ Environment.NewLine - Прави нов ред в TextBox в WFA
+-------------------------------------------------------------------------------------------------------------
 (- '0')	- принтира от инт към чар и обратното
 	Пример: Console.ReadLine(55 - '0');
-
+-------------------------------------------------------------------------------------------------------------
 doubleNumber.ToString(".00")
 	Принтира double число в textBox като го форматира до 2-рата цифра
 	Пример: doubleNumber.ToString(".00")
 		принтира - 2.33
-
+-------------------------------------------------------------------------------------------------------------
 Replace(" ", "") - замества първия чар с втория
 	Пример : string str = string.Intern(Console.ReadLine());
         	 str = str.Replace(" ", "").Replace(",", "").Replace(".", "").Replace("-", "");
 	Принтира стринга str без " ,.-" 
-
+-------------------------------------------------------------------------------------------------------------
 int n = Int32.Parse(Console.ReadLine());
 var bin = Convert.ToString(n, 2);
 	Конвертира числото "n" в двоичната бройна система
-
+-------------------------------------------------------------------------------------------------------------
 Math.Pow(x , y) - повдига числото 2.35 на степен 4.323
 	Пример: Math.Pow(2.35, 4.323)
-
+-------------------------------------------------------------------------------------------------------------
 Math.Sqrt(x) - изчислява корен квадратен от число
 	Пример: Math.Sqrt(100) принтира 10.
-
+-------------------------------------------------------------------------------------------------------------
 Math.Round(x , y) - принтира число със запетая по зададено ограничение
 	Пример: Console.WriteLine(Math.Round(55.12345678 , 3));
 	Принтира "55.123"
-
+-------------------------------------------------------------------------------------------------------------
 String.Join(" ",arrays)
 	чете масива и слага спейс между елементите
 	може да се слагат повече от един силмвол за разделител
 	Пример: Console.WriteLine(String.Join(" ",arrays));
-
+-------------------------------------------------------------------------------------------------------------
 string[] input = Console.ReadLine().Split();
 	Разделя написаното на един ред в различни индекси.
 	Пример: string[] input = Console.ReadLine().Split();
@@ -51,30 +51,63 @@ string[] input = Console.ReadLine().Split();
            	 int a = int.Parse(input[0]);
             	//Parse element 1
             	int b = int.Parse(input[1]);
-
+-------------------------------------------------------------------------------------------------------------
 MyArray.OrderBy(d => d).ToArray()
 	пренарежда масива по големина на цифрите в него
 	Пример: int[] MySortArray = MyArray.OrderBy(d => d).ToArray();
-
+-------------------------------------------------------------------------------------------------------------
 bool bb = array1.Zip(array2, (a, b) => (a == b)).Any(p => !p);
             if (!bb) Console.WriteLine("Equal");
             else Console.WriteLine("Not equal");
 	Проверява дали единия масив е равен на другия и принтира зададеното
-
+-------------------------------------------------------------------------------------------------------------
 charForRemove, System.StringSplitOptions.RemoveEmptyEntries
 	Премахва чарове/стрингове от един масив в друг.
 	Пример: string[] charForRemove = { " ", "," };
         	string text = Console.ReadLine(); //2, -4, -6, 10, 2, 1, 5
         	int ways = int.Parse(Console.ReadLine()); //3
         	string[] roadArray = text.Split(charForRemove, System.StringSplitOptions.RemoveEmptyEntries);
-
+-------------------------------------------------------------------------------------------------------------
 input.ToCharArray()
 	Разпада стринг на чарове.
 	Пример: string input = Console.ReadLine();
            	char[] charArray = input.ToCharArray();
+-------------------------------------------------------------------------------------------------------------
+How to move form WFA without border (only if we click on form)
+protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+            base.WndProc(ref m);
+        }
+-------------------------------------------------------------------------------------------------------------
+How to move if click on only one panel
+private void mainTop_MouseDown(object sender, MouseEventArgs e)
+        {
+            move = 1;
+            moveX = e.X;
+            moveY = e.Y;
+        }
 
+        private void mainTop_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - moveX, MousePosition.Y - moveY);
+            }
+        }
 
-
+        private void mainTop_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = 0;
+        }
+-------------------------------------------------------------------------------------------------------------
 
 
 
